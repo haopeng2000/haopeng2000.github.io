@@ -1,0 +1,38 @@
+{
+  "name": "Hao Peng",
+  "affiliation": "University of Electronic Science and Technology of China",
+  "affiliationShort": "UESTC",
+  "github": "haopeng2000",
+  "email": "",
+  "portrait": "",
+  "scholar": "",
+  "bio": "I am Hao Peng, affiliated with the University of Electronic Science and Technology of China (UESTC). My published work focuses on thick cloud removal in multitemporal remote sensing images, combining deep learning with low-rank tensor models and data-aware regularization.",
+  "interests": ["Remote sensing image restoration", "Low-rank tensor modeling", "Deep learning and optimization"],
+  "publications": [
+    {
+      "title": "A Unified Data-Aware Fidelity and Regularization Learning Paradigm for Thick Cloud Removal of Multitemporal Remote Sensing Images",
+      "authors": ["Hao Peng", "Ting-Zhu Huang", "Xi-Le Zhao", "Wei-Hao Wu", "Jie Lin", "Teng-Yu Ji"],
+      "venue": "IEEE Transactions on Geoscience and Remote Sensing",
+      "year": 2025,
+      "volume": "63",
+      "pages": "1–13",
+      "paper": "https://ieeexplore.ieee.org/document/11299282",
+      "code": "https://github.com/haopeng2000/DAFRL",
+      "method": "DAFRL",
+      "summary": "Data-aware fidelity and regularization learning for thick cloud removal in multitemporal remote sensing images."
+    },
+    {
+      "title": "Deep Domain Fidelity and Low-Rank Tensor Ring Regularization for Thick Cloud Removal of Multitemporal Remote Sensing Images",
+      "authors": ["Hao Peng", "Ting-Zhu Huang", "Xi-Le Zhao", "Jie Lin", "Wei-Hao Wu", "Li-Yuan Li"],
+      "venue": "IEEE Transactions on Geoscience and Remote Sensing",
+      "year": 2024,
+      "volume": "62",
+      "pages": "1–14",
+      "paper": "https://ieeexplore.ieee.org/document/10731945",
+      "doi": "10.1109/TGRS.2024.3485595",
+      "code": "https://github.com/haopeng2000/DFTR",
+      "method": "DFTR",
+      "summary": "Deep-domain fidelity and low-rank tensor ring regularization for restoring cloud-obscured multitemporal remote sensing images."
+    }
+  ]
+}
