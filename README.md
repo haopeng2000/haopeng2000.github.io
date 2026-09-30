@@ -2,24 +2,35 @@
 
 Website: https://haopeng2000.github.io/
 
-Adapted from [luost26/academic-homepage](https://github.com/luost26/academic-homepage), with a responsive two-column profile, publication cards, and research code pages. This version generates plain HTML and has no runtime dependencies.
+Uses the original HTML layouts, Bootstrap styles, fonts, navigation, profile cards, and publication cards from [luost26/academic-homepage](https://github.com/luost26/academic-homepage). The original Liquid source is stored in `template-sources.json`, and rendered to static HTML for GitHub Pages.
 
-## Update your information
+## Update content
 
-1. Edit `profile.json`: biography, affiliation, research interests, and publications. Optional `email`, `portrait`, and `scholar` fields are empty until provided. `portrait` may contain a local image path; `scholar` should be a full profile URL.
-2. Run `node build.mjs` (Node.js 18 or newer).
-3. Commit the generated `index.html`, `publications.html`, and `projects.html` together with the source changes.
+Edit `profile.json`, then install dependencies and rebuild:
 
-For a local preview, serve this folder with a static HTTP server, for example `npx --yes http-server . -p 8080`.
+```sh
+pnpm install
+node build.mjs
+```
 
-## GitHub Pages
+Commit the generated HTML pages with your content changes. The optional email and Scholar fields remain empty until supplied.
 
-In **Settings → Pages**, select **Deploy from a branch**, branch **main**, folder **/(root)**, and save. The `.nojekyll` file enables direct static publishing. No Ruby installation or build workflow is needed.
+## Photos and publication figures
 
-## Content sources
+- `haopeng.jpg`: optimized copy of the supplied personal photograph.
+- `dafrl.png`: rasterized from the supplied one-page DAFRL diagram PDF.
+- `dftr.png`: the supplied DFTR diagram.
 
-Name and affiliation: public GitHub profile. Publication metadata and paper URLs: the public [DAFRL](https://github.com/haopeng2000/DAFRL) and [DFTR](https://github.com/haopeng2000/DFTR) repositories. Research interests and biography summarize these published topics. No unverified degrees, positions, awards, or publication dates beyond the documented year are included.
+Original local image folders are excluded from Git; their files are unchanged. Only web-ready copies are published.
 
-## Credits
+## Layout
 
-The layout is inspired by the MIT-licensed academic-homepage template. Its original license is retained in `LICENSE`.
+The original Home, Home (Layout 2), Publications, Blog, and Showcase navigation is retained. Blog and Showcase have empty states until personal content is added. Education, awards, and news remain hidden until verified content is supplied. The sidebar adds （彭浩） beneath Hao Peng.
+
+## Deployment
+
+GitHub Pages publishes `main` at `/(root)`. `.nojekyll` enables static publishing without Ruby. `projects.html` redirects to the publication list, which includes all code links.
+
+## Credits and content sources
+
+The MIT license and template attribution are retained. Publication metadata comes from the public DAFRL and DFTR repositories; name and affiliation come from the public GitHub profile.

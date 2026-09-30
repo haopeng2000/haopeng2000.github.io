@@ -28,11 +28,11 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 
-                <li class="nav-item active">
+                <li class="nav-item ">
                     <a class="nav-link" href="/">Home</a>
                 </li>
                 
-                <li class="nav-item ">
+                <li class="nav-item active">
                     <a class="nav-link" href="/index_layout2.html">Home (Layout 2)</a>
                 </li>
                 
@@ -54,58 +54,60 @@
 </nav>
 
     <main class="flex-grow-1 flex-shrink-0 container-lg">
-        
-<div class="row">
-    <div class="col-lg-3 col-md-4">
-        <div class="row sticky-top" style="top: 80px">
+        <div class="row">
     <div class="col">
         <div class="card border-0 shadow-sm bg-white">
-            <div class="card-body px-4 pt-4 pb-3">
+            <div class="card-body p-5">
                 <div class="row">
                     <div class="col">
                         
                         <!-- When the screen is wider than md, float the portrait on the right -->
-                        <div class="figure d-none d-md-block">
+                        <div class="figure float-right ml-4 mb-4 d-none d-md-block">
                             <img 
                                 src="/haopeng.jpg" 
-                                class="figure-img img-fluid" 
+                                class="figure-img img-fluid img-thumbnail" 
+                                style="height: 200px;"
                                 data-toggle="tooltip" 
                                 data-placement="top" 
                                 title="Hao Peng">
                         </div>
-                        <div class="mb-3 d-md-none text-center">
-                            <img src="/haopeng.jpg" class="rounded-circle" style="max-width: 50%;" alt="Portrait">
+                        
+
+                        <div class="d-flex">
+                            <div class="h1 font-weight-normal">
+                                Hao Peng <small>（彭浩）</small>
+                            </div>
+                            
+                            <div class="ml-auto d-md-none">
+                                <a target="_blank" href="/haopeng.jpg">
+                                    <img src="/haopeng.jpg" class="rounded-circle" style="height: 48px;" alt="Portrait">
+                                </a>
+                            </div>
+                            
+                        </div>
+                        <div class="text-profile-position">
+                            
+                            
+                            University of Electronic Science and Technology of China<br/>
+                            
+                        </div>
+                        <div class="text-profile-bio mt-3" >
+                            <p>I am Hao Peng, affiliated with the University of Electronic Science and Technology of China (UESTC). My published work focuses on thick cloud removal in multitemporal remote sensing images, combining deep learning with low-rank tensor models and data-aware regularization.</p><p>Research interests: Remote sensing image restoration; Low-rank tensor modeling; Deep learning and optimization.</p>
                         </div>
                         
                     </div>
+        
                 </div>
+                <hr />
                 <div class="row">
-                    <div class="col text-center h4">
-                        Hao Peng<div class="h5 font-weight-normal mt-2 mb-0">（彭浩）</div>
-                    </div>
-                </div>
+                    <div class="col">
+                        
 
-                <div class="row small">
-                    <div class="col text-center">
-                        
-                        University of Electronic Science and Technology of China<br/>
-                        
-                    </div>
-                </div>
-
-                <div class="row small">
-                    <div class="col text-center">
-                        
-                    </div>
-                </div>
-
-                <div class="row pt-2">
-                    <div class="col text-center h4">
                         
                         
                         
-                        <a class="px-1 no-break" target="_blank" href="https://github.com/haopeng2000">
-                            <i class="fab fa-github"></i>
+                        <a class="pr-3 no-break" target="_blank" href="https://github.com/haopeng2000">
+                            <i class="fab fa-github"></i> GitHub
                         </a>
                         
 
@@ -117,99 +119,18 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-
-    </div>
-    <div class="col-lg-9 col-md-8">
-
-        <div class="mt-3 d-md-none"></div>
-<div class="row">
-    <div class="col">
-        <div class="card border-0 shadow-sm bg-white">
-            <div class="card-body p-4">
-                <div class="row px-3 pt-3">
-                    <div class="col h3">
-                        About Me
-                    </div>
-                </div>
-                <div class="row p-3">
-                    <div class="col">
-                        <div class="text-profile-bio mt-0" >
-                            <p>I am Hao Peng, affiliated with the University of Electronic Science and Technology of China (UESTC). My published work focuses on thick cloud removal in multitemporal remote sensing images, combining deep learning with low-rank tensor models and data-aware regularization.</p><p>Research interests: Remote sensing image restoration; Low-rank tensor modeling; Deep learning and optimization.</p>
-                        </div>
-                        
-                    </div>
-        
-                </div>
-            </div>
         </div>        
     </div>
 </div>
 
 
-        <!-- Debugging widgets -->
-        <div id="ghpages-domain-debug-message" class="row mt-3 d-none">
-    <div class="col">
-        <div class="alert alert-warning my-0" role="alert">
-            <h5><i class="fas fa-exclamation-triangle"></i> Warning</h5>
-            <strong>Problem:</strong>
-            The current name of your GitHub Pages repository ("<code class="repo-name-text"></code>") does not match the recommended repository name for your site ("<code class="domain-name-text"></code>").
-            <br>
-            <strong>Solution:</strong> Please consider renaming the repository to "<code class="domain-name-text"></code>", so that your site can be accessed directly at "<code>http://<span class="domain-name-text"></span></code>".
-            However, if the current repository name is intended, you can ignore this message by removing "<code>{% include widgets/debug_repo_name.html %}</code>" in <code>index.html</code>.
-        </div>
-    </div>
-</div>
-
-<script>
-striped_pathname = location.pathname.replace(/\/+$/, "").replace(/\/index\.html$/, "").replace(/\/+$/, "");
-document.querySelectorAll(".repo-name-text").forEach(function(element){
-    element.textContent = striped_pathname.replace("/", "");
-});
-document.querySelectorAll(".domain-name-text").forEach(function(element){
-    element.textContent = location.hostname;
-});
-
-if (location.hostname.search("github.io") != -1 && striped_pathname != ""){
-    document.getElementById("ghpages-domain-debug-message").classList.remove('d-none');
-}
-</script>
-
-        <div id="url-debug-message" class="row mt-3 d-none">
-    <div class="col">
-        <div class="alert alert-warning my-0" role="alert">
-            <h5><i class="fas fa-exclamation-triangle"></i> Action required</h5>
-            <strong>Problem:</strong>
-            The current root path of this site is "<code class="root-path-text"></code>",
-            which does not match the <code>baseurl</code> ("<code></code>") configured in <code>_config.yml</code>.
-            <br>
-
-            <strong>Solution:</strong>
-            Please set the <code>baseurl</code> in <code>_config.yml</code> to "<code class="root-path-text"></code>".
-        </div>
-    </div>
-</div>
-
-<script>
-striped_pathname = location.pathname.replace(/\/+$/, "").replace(/\/index\.html$/, "").replace(/\/+$/, "");
-if(striped_pathname != ""){
-    document.getElementById("url-debug-message").classList.remove('d-none');
-}
-document.querySelectorAll(".root-path-text").forEach(function(element){
-    element.textContent = striped_pathname;
-});
-</script>
 
 
-        
 
-        
 
-        
-        
-        
+
+    
+    
 <div class="my-3 p-0 bg-white shadow-sm rounded-xl">
     <h6 class="border-bottom border-gray p-3 mb-0">
         <i class="fas fa-star"></i> Selected Publications 
@@ -360,9 +281,7 @@ document.querySelectorAll(".root-path-text").forEach(function(element){
 </div>
 
 
-        
-    </div>
-</div>
+
 
     </main>
     <footer class="footer flex-shrink-0 border-top py-2 mt-5 bg-white small">
