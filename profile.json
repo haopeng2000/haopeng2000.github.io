@@ -6,12 +6,14 @@
   "email": "",
   "portrait": "/haopeng.jpg",
   "scholar": "",
-  "bio": "I am Hao Peng, affiliated with the University of Electronic Science and Technology of China (UESTC). My published work focuses on thick cloud removal in multitemporal remote sensing images, combining deep learning with low-rank tensor models and data-aware regularization.",
-  "interests": [
-    "Remote sensing image restoration",
-    "Low-rank tensor modeling",
-    "Deep learning and optimization"
-  ],
+  "bio": "I am currently pursuing a Ph.D. degree under the supervision of Prof. Ting-Zhu Huang and Prof. Xi-Le Zhao in the School of Mathematical Sciences at the University of Electronic Science and Technology of China (UESTC), Chengdu, China.",
+  "bioLinks": {
+    "Prof. Ting-Zhu Huang": "https://www.researchgate.net/profile/Ting-Zhu-Huang",
+    "Prof. Xi-Le Zhao": "https://zhaoxile.github.io/",
+    "School of Mathematical Sciences": "http://www.math.uestc.edu.cn/index.htm",
+    "University of Electronic Science and Technology of China (UESTC)": "https://www.uestc.edu.cn/"
+  },
+  "interests": [],
   "publications": [
     {
       "title": "A Unified Data-Aware Fidelity and Regularization Learning Paradigm for Thick Cloud Removal of Multitemporal Remote Sensing Images",

@@ -32,6 +32,10 @@ liquid.registerFilter('group_by_exp', (items, variable, expression) => {
   }
   return [...groups].map(([name, items]) => ({ name, items }));
 });
+let bioHtml = escapeHtml(profile.bio);
+for (const [label, url] of Object.entries(profile.bioLinks || {})) {
+  bioHtml = bioHtml.replace(escapeHtml(label), `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(label)}</a>`);
+}
 const site = {
   baseurl: '',
   data: {
@@ -40,7 +44,7 @@ const site = {
       positions: [{name: profile.affiliation}], email: profile.email || '', github: profile.github,
       gscholar: profile.scholar || null, portrait_url: profile.portrait, portrait_caption: profile.name,
       short_bio_text_justify: false,
-      short_bio: `<p>${escapeHtml(profile.bio)}</p><p>Research interests: ${profile.interests.map(escapeHtml).join('; ')}.</p>`
+      short_bio: `<p>${bioHtml}</p>${profile.interests?.length ? `<p>Research interests: ${profile.interests.map(escapeHtml).join('; ')}.</p>` : ''}`
     },
     authors: { [profile.name]: { bold: true } },
     navigation: { pages: [
