@@ -52,7 +52,7 @@ const site = {
       {name:'Publications',url:'/publications.html'}, {name:'Blog',url:'/blog.html'}, {name:'Showcase',url:'/showcase.html'}
     ]},
     display: {
-      homepage: { show_experience: false, show_news: false, show_selected_publications: true },
+      homepage: { show_experience: false, show_news: true, show_selected_publications: true },
       footer_text: '<a href="https://github.com/luost26/academic-homepage" target="_blank"><i class="fas fa-pencil-ruler"></i> academic-homepage</a>'
     }
   },
@@ -60,8 +60,13 @@ const site = {
     ...p, id: p.method, date: `${p.year}-01-01`, selected: true, pub: p.venue, pub_date: String(p.year), abstract: p.summary,
     links: { Paper: p.paper, Code: p.code, ...(p.doi ? { DOI: 'https://doi.org/' + p.doi } : {}) }
   })),
-  posts: [], news: [], showcase: []
+  posts: [], news: [...(profile.news || [])].sort((a, b) => b.date.localeCompare(a.date)), showcase: []
 };
+// Prioritize first/corresponding authorship, then newest work within each group.
+const isLeadAuthor = p => p.authors[0] === profile.name || (p.corresponding || []).includes(profile.name);
+site.selected_publications = site.publications.filter(p => p.selected).sort((a, b) =>
+  Number(isLeadAuthor(b)) - Number(isLeadAuthor(a)) || b.date.localeCompare(a.date)
+);
 for (const name of ['index.html','index_layout2.html','publications.html','blog.html','showcase.html']) {
   const [, frontmatter, body] = sources[name].match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/);
   const page = parseYaml(frontmatter);

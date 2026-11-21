@@ -105,5 +105,12 @@
       "cover": "/c-transformer.png"
     }
   ],
-  "chineseName": "（彭浩）"
+  "chineseName": "（彭浩）",
+  "news": [
+    {
+      "date": "2026-10-12",
+      "displayDate": "12 Oct. 2026",
+      "title": "Our work on “Coupled Transformer Framework for Thick Cloud Removal of Multitemporal Remote Sensing Images” was accepted by TGRS!"
+    }
+  ]
 }
