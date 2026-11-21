@@ -13,7 +13,7 @@ for (const [name, source] of Object.entries(sources)) {
   mkdirSync(path.dirname(target), { recursive: true });
   writeFileSync(target, source);
 }
-const liquid = new Liquid({ root: path.join(renderRoot, '_includes'), jekyllInclude: true, strictFilters: true });
+const liquid = new Liquid({ root: path.join(renderRoot, '_includes'), jekyllInclude: true, strictFilters: true, locale: 'en-US' });
 const escapeHtml = value => String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
 liquid.registerFilter('relative_url', value => {
   if (!value) return '';
@@ -52,7 +52,7 @@ const site = {
       {name:'Publications',url:'/publications.html'}, {name:'Blog',url:'/blog.html'}, {name:'Showcase',url:'/showcase.html'}
     ]},
     display: {
-      homepage: { show_experience: false, show_news: true, show_selected_publications: true },
+      homepage: { show_experience: false, show_news: true, num_news: 10, show_selected_publications: true },
       footer_text: '<a href="https://github.com/luost26/academic-homepage" target="_blank"><i class="fas fa-pencil-ruler"></i> academic-homepage</a>'
     }
   },
