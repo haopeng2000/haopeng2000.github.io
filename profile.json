@@ -33,7 +33,11 @@
       "code": "https://github.com/haopeng2000/DAFRL",
       "method": "DAFRL",
       "summary": "Data-aware fidelity and regularization learning for thick cloud removal in multitemporal remote sensing images.",
-      "cover": "/dafrl.png"
+      "cover": "/dafrl.png",
+      "corresponding": [
+        "Ting-Zhu Huang",
+        "Xi-Le Zhao"
+      ]
     },
     {
       "title": "Deep Domain Fidelity and Low-Rank Tensor Ring Regularization for Thick Cloud Removal of Multitemporal Remote Sensing Images",
@@ -54,7 +58,51 @@
       "code": "https://github.com/haopeng2000/DFTR",
       "method": "DFTR",
       "summary": "Deep-domain fidelity and low-rank tensor ring regularization for restoring cloud-obscured multitemporal remote sensing images.",
-      "cover": "/dftr.png"
+      "cover": "/dftr.png",
+      "corresponding": [
+        "Ting-Zhu Huang",
+        "Xi-Le Zhao"
+      ]
+    },
+    {
+      "title": "ProTD: Prompted Tensor Decomposition for Hyperspectral Anomaly Detection",
+      "authors": [
+        "Bing-Zhang Fu",
+        "Ting-Zhu Huang",
+        "Xi-Le Zhao",
+        "Wei-Hao Wu",
+        "Hao Peng"
+      ],
+      "venue": "IEEE Transactions on Geoscience and Remote Sensing",
+      "year": 2025,
+      "method": "ProTD",
+      "paper": "https://ieeexplore.ieee.org/document/11177542",
+      "doi": "10.1109/TGRS.2025.3613978",
+      "cover": "/protd.png",
+      "corresponding": [
+        "Ting-Zhu Huang",
+        "Xi-Le Zhao"
+      ]
+    },
+    {
+      "title": "Coupled Transformer Framework for Thick Cloud Removal of Multitemporal Remote Sensing Images",
+      "authors": [
+        "Yang Zhou",
+        "Hao Peng",
+        "Chuan Wang",
+        "Teng-Yu Ji",
+        "Yong Chen",
+        "Xi-Le Zhao"
+      ],
+      "corresponding": [
+        "Chuan Wang"
+      ],
+      "venue": "IEEE Transactions on Geoscience and Remote Sensing",
+      "year": 2026,
+      "method": "C-Transformer",
+      "paper": "https://ieeexplore.ieee.org/document/11740711",
+      "doi": "10.1109/TGRS.2026.3744497",
+      "cover": "/c-transformer.png"
     }
   ],
   "chineseName": "（彭浩）"
